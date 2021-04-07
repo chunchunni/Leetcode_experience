@@ -15,4 +15,4 @@
 ### 2、凑零钱
     对于指定金额，给出在币值范围内进行组合的最少数量解。
 
-解决方法1--暴力递归：遍历币值列表，计算金额-当前币值i的最优解（即子问题），然后在 前一个保留下来的最优解 和 当前子问题的最优解之间 之间选出最小者。[代码](ttps://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
+解决方法1--暴力递归：遍历币值列表，计算金额-当前币值i的最优解（即子问题），然后在 前一个保留下来的最优解 和 当前子问题的最优解之间 之间选出最小者。[代码](https://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
