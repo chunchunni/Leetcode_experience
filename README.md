@@ -15,4 +15,10 @@
 ### 2、凑零钱
     对于指定金额，给出在币值范围内进行组合的最少数量解。
 
-解决方法1--暴力递归：遍历币值列表，计算金额-当前币值i的最优解（即子问题），然后在 前一个保留下来的最优解 和 当前子问题的最优解之间 之间选出最小者。[代码](https://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
+解决方法1--暴力递归：遍历币值列表，计算金额-当前币值i的最优解（即子问题），然后在 前一个保留下来的最优解 和 当前子问题的最优解之间 之间选出最小者。无论当前金额是多少，所做的选择就是从面额列表中选择一枚硬币，此时金额就会减少。[代码](https://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
+
+解决方法2--带备忘录：使用一个备忘录来计算已经求过的金额所需的虽小币数，当再次递归到这个金额时，直接查找备忘录中是否计算过，有则直接读取。[代码](https://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
+
+解决方法2--DP迭代：使用自底向上的DP Table来消除重叠子问题，类似于备忘录。[代码](https://github.com/chunchunni/Leetcode_experience/blob/main/clq.py)
+
+后两者解法与第一种的区别在于优化了重叠的子问题，而状态转移方程部分其实是一致的。
